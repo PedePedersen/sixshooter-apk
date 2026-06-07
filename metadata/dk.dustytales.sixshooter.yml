@@ -1,0 +1,49 @@
+# F-Droid metadata for Six Shooter.
+# Format: https://f-droid.org/docs/Build_Metadata_Reference/
+#
+# This app is published to F-Droid as a PREBUILT BINARY pulled from the
+# GitHub releases of this repo (the `Binaries:` field below), verified
+# against the source build. Before this can be submitted to fdroiddata,
+# the items marked TODO must be in place:
+#   1. A GitHub release tagged `v<versionName>` (e.g. v1.2) on this repo.
+#   2. A release APK asset named `sixshooter-<versionName>.apk`
+#      (e.g. sixshooter-1.2.apk) attached to that release, signed with a
+#      STABLE upstream key (not the debug key).
+#   3. The SHA-256 fingerprint of that signing certificate filled into
+#      AllowedAPKSigningKeys below.
+# Summary and full description are imported automatically from the
+# fastlane metadata in this repo (fastlane/metadata/android/en-US/).
+
+Categories:
+  - Games
+License: MIT
+AuthorName: Dusty Tales
+WebSite: https://github.com/PedePedersen/sixshooter
+SourceCode: https://github.com/PedePedersen/sixshooter-apk
+IssueTracker: https://github.com/PedePedersen/sixshooter-apk/issues
+
+RepoType: git
+Repo: https://github.com/PedePedersen/sixshooter-apk.git
+
+# Prebuilt APK served from GitHub releases. %v = versionName, %c = versionCode.
+Binaries: https://github.com/PedePedersen/sixshooter-apk/releases/download/v%v/sixshooter-%v.apk
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-release-unsigned.apk
+
+# TODO: SHA-256 fingerprint (lowercase hex, no colons) of the release
+# signing certificate, required for binary verification of the GitHub
+# release APK. Obtain with:
+#   apksigner verify --print-certs sixshooter-1.2.apk
+# AllowedAPKSigningKeys: 0000000000000000000000000000000000000000000000000000000000000000
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: Tags ^v[0-9.]+$
+CurrentVersion: '1.2'
+CurrentVersionCode: 3
