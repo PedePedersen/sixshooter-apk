@@ -1,0 +1,11 @@
+# Gradle build-output og caches
+.gradle/
+build/
+app/build/
+
+# Maskin-specifik SDK-sti (genskabes med: echo "sdk.dir=$HOME/android-sdk" > local.properties)
+local.properties
+
+# IDE-filer
+.idea/
+*.iml

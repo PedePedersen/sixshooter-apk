@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Pergament-tone som baggrund for launcher-ikonet -->
+    <color name="ic_launcher_background">#D8C59A</color>
+</resources>

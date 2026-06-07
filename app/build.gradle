@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dk.dustytales.sixshooter'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'dk.dustytales.sixshooter'
+        minSdk 26
+        targetSdk 34
+        versionCode 2
+        versionName '1.1'
+    }
+
+    buildTypes {
+        debug {
+            // Debug-signering sker automatisk med ~/.android/debug.keystore
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+// Ingen dependencies: appen bruger kun android.app.Activity + android.webkit
+// fra platformen — ingen AndroidX, ingen eksterne biblioteker.
