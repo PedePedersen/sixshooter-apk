@@ -1,0 +1,2 @@
+• New headline typeface: Rye (OFL-licensed) — also used for the cartridge stamp engraving
+• Removed redundant "Back to the cylinder" button on the setup page (use the × in the corner)

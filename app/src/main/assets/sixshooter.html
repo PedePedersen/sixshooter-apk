@@ -24,9 +24,12 @@
     font-family: 'OldNewspaperTypes';
     src: url('assets/OldNewspaperTypes.ttf') format('truetype');
   }
+  /* Rye (OFL) er overskriftsfonten — den erstatter BleedingCowboys
+     (filen ligger fortsat i assets/ men bruges ikke). Samme @font-face
+     gør også 'Rye' tilgængelig for patron-stemplets SVG-tekst. */
   @font-face {
-    font-family: 'BleedingCowboys';
-    src: url('assets/BleedingCowboys.ttf') format('truetype');
+    font-family: 'Rye';
+    src: url('assets/Rye-Regular.ttf') format('truetype');
   }
   /* Baggrunden ligger på html-elementet, så pergamentet dækker HELE
      skærmen — også bag status bar/notch/kamerahul (viewport-fit=cover).
@@ -69,7 +72,7 @@
      på smalle skærme; let nedtonet størrelse ift. opsætningssidens h1. */
   /* Titlen starter UNDER de faste hjørneknapper (top 3vw + 52px høje), så
      den kan stå stor og centreret uden at kollidere med dem ved nogen
-     skærmbredde — BleedingCowboys er for bred til at dele række med dem. */
+     skærmbredde — overskriftsfonten er for bred til at dele række med dem. */
   #ss-hoved-titel {
     margin-top: calc(52px + 1vw);
     margin-bottom: auto;
@@ -124,7 +127,7 @@
     justify-content: center;
   }
   h1 {
-    font-family: 'BleedingCowboys', 'OldNewspaperTypes', serif;
+    font-family: 'Rye', 'OldNewspaperTypes', serif;
     font-size: clamp(2.4rem, 11vw, 4rem);
     font-weight: normal;
     color: var(--brun-moerk);
@@ -133,7 +136,7 @@
     text-align: center;
   }
   h2 {
-    font-family: 'BleedingCowboys', 'OldNewspaperTypes', serif;
+    font-family: 'Rye', 'OldNewspaperTypes', serif;
     font-size: clamp(1.3rem, 6vw, 1.9rem);
     font-weight: normal;
     color: var(--brun-moerk);
@@ -175,7 +178,7 @@
   /* Resultat-linjen under tromlen — FAST højde (uafhængig af indhold og
      font-størrelse), så layoutet ikke forskydes når resultatet skifter. */
   #ss-resultat {
-    font-family: 'BleedingCowboys', 'OldNewspaperTypes', serif;
+    font-family: 'Rye', 'OldNewspaperTypes', serif;
     font-size: clamp(2rem, 10vw, 3.4rem);
     height: calc(clamp(2rem, 10vw, 3.4rem) * 1.3);
     line-height: 1.3;
@@ -439,8 +442,6 @@
       <ul class="ss-holdliste" id="ss-holdliste"></ul>
       <p class="ss-hint">Save the current players as a team. Load a team to edit it, then save under the same name to overwrite.</p>
     </section>
-
-    <button class="kamp-udfør-btn" onclick="ssVisOpsaetning(false)">Back to the cylinder</button>
   </div>
 
   <!-- Lyde: spin under tromlerullet; bang ved landing på patron; klik ved tomt kammer -->

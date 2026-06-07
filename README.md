@@ -24,7 +24,7 @@ i `app/build.gradle` før installation på telefon):
 
 ```
 cp ~/sixshooter/sixshooter.html app/src/main/assets/
-cp ~/sixshooter/assets/{BleedingCowboys.ttf,OldNewspaperTypes.ttf,paper.webp,spin.mp3,bang.mp3,klik.mp3} app/src/main/assets/assets/
+cp ~/sixshooter/assets/{Rye-Regular.ttf,OldNewspaperTypes.ttf,paper.webp,spin.mp3,bang.mp3,klik.mp3} app/src/main/assets/assets/
 ```
 
 ## WebView-konfiguration (vigtige detaljer)

@@ -1,3 +1,2 @@
 • Parchment background now covers the entire screen, including the area behind the camera cutout / notch
 • UI elements respect safe-area insets so nothing hides behind the camera
-• Removed redundant "Back to the cylinder" button on the setup page (use the × in the corner)
