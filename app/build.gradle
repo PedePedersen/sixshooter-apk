@@ -2,6 +2,17 @@ plugins {
     id 'com.android.application'
 }
 
+// Release-signering læses fra keystore.properties (gitignored, ligger ikke i
+// repoet). Findes filen IKKE — fx på F-Droids byggeserver — bygges release
+// usigneret (app-release-unsigned.apk), så reproducerbarheds-verifikationen
+// stadig virker. Lokalt med filen til stede signeres release-APK'en med den
+// stabile upstream-nøgle, som GitHub-releasen og AllowedAPKSigningKeys bygger på.
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystorePropsFile))
+}
+
 android {
     namespace 'dk.dustytales.sixshooter'
     compileSdk 34
@@ -14,9 +25,26 @@ android {
         versionName '1.2'
     }
 
+    signingConfigs {
+        if (keystorePropsFile.exists()) {
+            release {
+                storeFile file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
+    }
+
     buildTypes {
         debug {
             // Debug-signering sker automatisk med ~/.android/debug.keystore
+        }
+        release {
+            // Kun signér når nøglen er til stede (ellers usigneret — se note ovenfor).
+            if (keystorePropsFile.exists()) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 

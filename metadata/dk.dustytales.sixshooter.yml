@@ -3,14 +3,7 @@
 #
 # This app is published to F-Droid as a PREBUILT BINARY pulled from the
 # GitHub releases of this repo (the `Binaries:` field below), verified
-# against the source build. Before this can be submitted to fdroiddata,
-# the items marked TODO must be in place:
-#   1. A GitHub release tagged `v<versionName>` (e.g. v1.2) on this repo.
-#   2. A release APK asset named `sixshooter-<versionName>.apk`
-#      (e.g. sixshooter-1.2.apk) attached to that release, signed with a
-#      STABLE upstream key (not the debug key).
-#   3. The SHA-256 fingerprint of that signing certificate filled into
-#      AllowedAPKSigningKeys below.
+# against the source build and the upstream signing key.
 # Summary and full description are imported automatically from the
 # fastlane metadata in this repo (fastlane/metadata/android/en-US/).
 
@@ -37,11 +30,8 @@ Builds:
       - yes
     output: build/outputs/apk/release/app-release-unsigned.apk
 
-# TODO: SHA-256 fingerprint (lowercase hex, no colons) of the release
-# signing certificate, required for binary verification of the GitHub
-# release APK. Obtain with:
-#   apksigner verify --print-certs sixshooter-1.2.apk
-# AllowedAPKSigningKeys: 0000000000000000000000000000000000000000000000000000000000000000
+# SHA-256 of the release signing certificate (apksigner verify --print-certs).
+AllowedAPKSigningKeys: 505876e346edfe7dcf4b4e3b9ab567e6bdb54c106b20a070a1d07df224ff42e7
 
 AutoUpdateMode: Version v%v
 UpdateCheckMode: Tags ^v[0-9.]+$

@@ -9,3 +9,8 @@ local.properties
 # IDE-filer
 .idea/
 *.iml
+
+# Signing secrets — ALDRIG committe (keystore ligger uden for repoet)
+keystore.properties
+*.keystore
+*.jks
