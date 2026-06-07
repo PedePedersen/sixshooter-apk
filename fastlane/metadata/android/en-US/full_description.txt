@@ -1,0 +1,13 @@
+Spin a western revolver cylinder to pick a winner — or a loser — among up to six players.
+
+Every player gets exactly one cartridge in their own colour; the remaining chambers stay empty. The cylinder spins with sound, zooms in on the chamber that lands on top, and announces the result: land on a cartridge and that player wins (bang!), land on an empty chamber and nobody does (click).
+
+Features:
+
+• Up to six players, each with a named cartridge in one of 12 dusty western colours, including silver, gold, iron and brass
+• Save, load, edit and delete named teams — the app remembers your latest state between sessions
+• Elimination mode: remove the winner's cartridge after a spin and keep going until one remains
+• Comes pre-loaded with Blondie, Tuco and Sentenza — "The Good, the Bad & the Ugly"
+• Styled like a weathered parchment poster: hand-drawn revolver drum, western typefaces, saloon sounds
+
+Fully offline: no internet permission, no ads, no tracking, no accounts. Everything is stored locally on your device.
