@@ -1,14 +1,5 @@
-# F-Droid metadata for Six Shooter.
-# Format: https://f-droid.org/docs/Build_Metadata_Reference/
-#
-# This app is published to F-Droid as a PREBUILT BINARY pulled from the
-# GitHub releases of this repo (the `Binaries:` field below), verified
-# against the source build and the upstream signing key.
-# Summary and full description are imported automatically from the
-# fastlane metadata in this repo (fastlane/metadata/android/en-US/).
-
 Categories:
-  - Games
+  - Dice
 License: MIT
 AuthorName: Dusty Tales
 WebSite: https://github.com/PedePedersen/sixshooter
@@ -17,8 +8,6 @@ IssueTracker: https://github.com/PedePedersen/sixshooter-apk/issues
 
 RepoType: git
 Repo: https://github.com/PedePedersen/sixshooter-apk.git
-
-# Prebuilt APK served from GitHub releases. %v = versionName, %c = versionCode.
 Binaries: https://github.com/PedePedersen/sixshooter-apk/releases/download/v%v/sixshooter-%v.apk
 
 Builds:
@@ -29,10 +18,9 @@ Builds:
     gradle:
       - yes
 
-# SHA-256 of the release signing certificate (apksigner verify --print-certs).
 AllowedAPKSigningKeys: 505876e346edfe7dcf4b4e3b9ab567e6bdb54c106b20a070a1d07df224ff42e7
 
-AutoUpdateMode: Version v%v
+AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
 CurrentVersion: '1.2'
 CurrentVersionCode: 3
