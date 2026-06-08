@@ -25,6 +25,14 @@ android {
         versionName '1.2'
     }
 
+    // F-Droid afviser APK'er med AGP's "Dependency metadata"-signeringsblok
+    // (en Google-signeret afhængigheds-blob, der gør bygget ikke-reproducerbart).
+    // Slå den fra, så både .apk og .aab er rene.
+    dependenciesInfo {
+        includeInApk false
+        includeInBundle false
+    }
+
     signingConfigs {
         if (keystorePropsFile.exists()) {
             release {
