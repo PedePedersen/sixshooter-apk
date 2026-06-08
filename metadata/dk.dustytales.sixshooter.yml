@@ -28,7 +28,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    output: build/outputs/apk/release/app-release-unsigned.apk
 
 # SHA-256 of the release signing certificate (apksigner verify --print-certs).
 AllowedAPKSigningKeys: 505876e346edfe7dcf4b4e3b9ab567e6bdb54c106b20a070a1d07df224ff42e7
