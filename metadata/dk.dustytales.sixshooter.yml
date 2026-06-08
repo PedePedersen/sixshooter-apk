@@ -8,12 +8,13 @@ IssueTracker: https://github.com/PedePedersen/sixshooter-apk/issues
 
 RepoType: git
 Repo: https://github.com/PedePedersen/sixshooter-apk.git
-Binaries: https://github.com/PedePedersen/sixshooter-apk/releases/download/v%v/sixshooter-%v.apk
+Binaries: 
+  https://github.com/PedePedersen/sixshooter-apk/releases/download/v%v/sixshooter-%v.apk
 
 Builds:
   - versionName: '1.2'
     versionCode: 3
-    commit: v1.2
+    commit: 78ded2774b258212885722e551d8cc653e1974ba
     subdir: app
     gradle:
       - yes
